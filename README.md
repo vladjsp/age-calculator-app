@@ -31,4 +31,4 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/vladjsp/age-calculator-app)
-- Live Site URL: [Netlify](age-calculator-app-frontendmentor.netlify.app)
+- Live Site URL: [Netlify](https://age-calculator-app-frontendmentor.netlify.app)
