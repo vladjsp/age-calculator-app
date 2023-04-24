@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;0,400;0,600;0,700;0,800;1,800&display=swap');
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 3rem;
+  background-color: var(--light-grey);
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  min-height: 80vh;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--light-grey);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 40vw;
+  width: 400px;
+  min-height: 60vh;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 2rem;
+  border-bottom-right-radius: 7rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+form label {
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: var(--smokey-grey);
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  margin-bottom: 3px;
+}
+
+.input-field {
+  display: flex;
+  width: 85px;
+  flex-direction: column;
+  margin: 5px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.input-field input {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border: 1px solid var(--light-grey);
+  border-radius: 5px;
+}
+.input-field input:focus {
+  border: 1px solid var(--purple);
+  border-radius: 5px;
+  outline: none;
+}
+
+/*Remove arrows from input field*/
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Errors in inputs */
+.input-field p {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  font-style: italic;
+  font-size: 0.5rem;
+  font-weight: 200;
+  color: var(--light-red);
+}
+
+.button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.button button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.25rem;
+  border-radius: 100%;
+  background-color: var(--purple);
+  border: none;
+  cursor: pointer;
+}
+.button button:hover {
+  background-color: var(--off-black);
+}
+
+.button hr {
+  width: 100%;
+  border: 1px solid var(--light-grey);
+}
+
+.result {
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 3.5rem;
+}
+
+.result span {
+  color: var(--purple);
+}
+
+/* Global */
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.text-red {
+  color: var(--light-red);
+}
+
+.border-red {
+  border: 1px solid var(--light-red) !important;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+  body {
+    min-height: 0;
+    padding: 2rem;
+  }
+
+  .container {
+    display: block;
+    padding: 2rem;
+  }
+
+  .app {
+    display: block;
+    margin: 0 auto;
+    max-width: 80vw;
+    min-height: 40vh;
+    padding: 1.5rem;
+  }
+
+  form {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .input-field {
+    display: flex;
+    width: 90px;
+    margin-right: 7px;
+  }
+
+  .input-field input {
+    font-size: 1rem;
+    padding: 5px 8px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 40px 0;
+  }
+
+  .button button {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .button hr {
+    z-index: 1;
+  }
+}
+
+@media (max-width: 430px) {
+  body {
+    min-height: 0;
+    padding: 1rem;
+  }
+
+  .container {
+    display: block;
+    padding: 1rem;
+  }
+
+  .app {
+    display: block;
+    margin: 0 auto;
+    max-width: 80vw;
+    min-height: 50vh;
+    padding: 1.5rem;
+  }
+
+  form {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .input-field {
+    display: flex;
+    width: 70px;
+    margin-right: 7px;
+  }
+
+  .input-field input {
+    font-size: 1rem;
+    padding: 5px 8px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+  }
+
+  .button button {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .button hr {
+    z-index: 1;
+  }
+}

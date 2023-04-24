@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <title>Age calculator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app">
+        <form>
+          <div class="input-field">
+            <label>DAY</label>
+            <input id="day" type="number" min="1" max="31" placeholder="DD" required />
+            <p id="day-req-error" class="hide">This field is required</p>
+            <p id="day-value-error" class="hide">Must be a valid day</p>
+          </div>
+          <div class="input-field">
+            <label>MONTH</label>
+            <input id="month" type="number" min="1" max="12" placeholder="MM" required />
+            <p id="mon-req-error" class="hide">This field is required</p>
+            <p id="mon-value-error" class="hide">Must be a valid month</p>
+          </div>
+          <div class="input-field">
+            <label>YEAR</label>
+            <input id="year" type="number" min="1930" max="2023" placeholder="YYYY" required />
+            <p id="year-req-error" class="hide">This field is required</p>
+            <p id="year-value-error" class="hide">Must be a valid year</p>
+          </div>
+        </form>
+
+        <div class="button">
+          <hr />
+          <button id="submit" type="submit" onclick="submit()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 46 44">
+              <g fill="none" stroke="#FFF" stroke-width="2">
+                <path
+                  d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+              </g>
+            </svg>
+          </button>
+        </div>
+
+        <div class="result">
+          <p><span id="result_year">--</span> years</p>
+          <p><span id="result_month">--</span> month</p>
+          <p><span id="result_day">--</span> days</p>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
